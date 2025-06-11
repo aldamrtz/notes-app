@@ -2,11 +2,14 @@
   "name": "notes-app",
   "version": "1.0.0",
   "main": "webpack.config.js",
+  "homepage": "https://aldamrtz.github.io/notes-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "@babel/preset-env": "^7.27.2",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "prettier": "^3.5.3",
     "raw-loader": "^4.0.2",
